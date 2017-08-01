@@ -8,13 +8,8 @@ function calculateTime(arr, duration) {
             let start = value[0].split(':');
             let end = value[1].split(':');
 
-            let startHour = start[0];
-            let startMin = start[1];
-            let endHour = end[0];
-            let endMin = end[1];
-
-            let rangeStart = ((startHour - 9) * 4) + (startMin / 15);
-            let rangeEnd = ((endHour - 9) * 4) + (endMin / 15);
+            let rangeStart = ((start[0] - 9) * 4) + (start[1] / 15);
+            let rangeEnd = ((end[0] - 9) * 4) + (end[1] / 15);
 
             for (let i = rangeStart; i < rangeEnd; i++) {
                 test[i]++;
